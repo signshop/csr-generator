@@ -8,5 +8,5 @@ USAGE
 1. Run
 
 ```
-bash generate-csr.sh $(basename `pwd`)
+bash csr-generator $(basename `pwd`)
 ```
