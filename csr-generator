@@ -60,3 +60,4 @@ echo "Generating self-signed certificate..."
 openssl x509 -days 3650 -req -signkey ${SSLHOST}.key < ${SSLHOST}.csr > ${SSLHOST}.crt
 
 echo "Finished."
+echo "Please update $ADDRESS in the script then run ``bash csr-generator $(basename `pwd`)``"
