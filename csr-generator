@@ -57,6 +57,6 @@ expect -c "
 
 # generate self-signed certificate
 echo "Generating self-signed certificate..."
-openssl x509 -days 3650 -req -signkey ${SSLHOST}.key < ${SSLHOST}.csr > ${SSLHOST}.crt
+openssl x509 -days 3650 -req -signkey ${SSLHOST}.key < ${SSLHOST}.csr > ${SSLHOST}.crt.self-signed
 
 echo "Finished."
