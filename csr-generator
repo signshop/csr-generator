@@ -27,16 +27,16 @@ expect -c "
 
 	spawn openssl req -new -key ${SSLHOST}.key -out ${SSLHOST}.csr
 	expect \"Country Name\"
-	send \"${ADDRESS[0]}\n\"
+	send \"${COUTRY_NAME:-${ADDRESS[0]}}\n\"
 
 	expect \"State or Province Name\"
-	send \"${ADDRESS[1]}\n\"
+	send \"${STATE_NAME:-${ADDRESS[1]}}\n\"
 
 	expect \"Locality Name\"
-	send \"${ADDRESS[2]}\n\"
+	send \"${LOCALITY_NAME:-${ADDRESS[2]}}\n\"
 
 	expect \"Organization Name\"
-	send \"${ADDRESS[3]}\n\"
+	send \"${ORG_NAME:-${ADDRESS[3]}}\n\"
 
 	expect \"Organizational Unit Name\"
 	send \"\n\"
@@ -45,7 +45,7 @@ expect -c "
 	send \"${SSLHOST}\n\"
 
 	expect \"Email Address\"
-	send \"${ADDRESS[4]}\n\"
+	send \"${EMAIL:-${ADDRESS[4]}}\n\"
 
 	expect \"A challenge password\"
 	send \"\n\"
