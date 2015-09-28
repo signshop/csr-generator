@@ -20,11 +20,21 @@ COUTRY_NAME=JP STATE_NAME=Tokyo LOCALITY_NAME=Minato-ku ORG_NAME='My Awsome Comp
 TIPS
 ====
 
-Show detail for .crt file
-# openssl x509 -text -noout -in example.com.crt
+- Show detail for .crt file
 
-Show detail for .key file
-# openssl rsa -text -noout -in example.com.key
+```
+openssl x509 -text -noout -in example.com.crt
+```
 
-Show detail for .csr file
-# openssl req -text -noout -in example.com.csr
+
+- Show detail for .key file
+
+```
+openssl rsa -text -noout -in example.com.key
+```
+
+- Show detail for .csr file
+
+```
+openssl req -text -noout -in example.com.csr
+```
