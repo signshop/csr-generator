@@ -15,7 +15,7 @@ echo -n "Generating key and csr for \"${SSLHOST}\"..."
 
 expect -c "
 	set timeout 5
-	spawn openssl genrsa -des3 -out ${SSLHOST}.temp 2048
+	spawn openssl genrsa -aes256 -out ${SSLHOST}.temp 2048
 	expect \"Enter pass phrase for\"
 	send \"${PASSWD_TMP}\n\"
 	expect \"Verifying\"
@@ -25,7 +25,7 @@ expect -c "
 	expect \"Enter pass phrase\"
 	send \"${PASSWD_TMP}\n\"
 
-	spawn openssl req -new -key ${SSLHOST}.key -out ${SSLHOST}.csr
+	spawn openssl req -new -sha256 -key ${SSLHOST}.key -out ${SSLHOST}.csr
 	expect \"Country Name\"
 	send \"${COUTRY_NAME:-${ADDRESS[0]}}\n\"
 
