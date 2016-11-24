@@ -18,7 +18,7 @@ bash csr-generator $(basename `pwd`)
 or you can specify your addresses as below;
 
 ```
-COUTRY_NAME=JP STATE_NAME=Tokyo LOCALITY_NAME=Minato-ku ORG_NAME='My Awsome Company' EMAIL=me@example.com bash csr-generator $(basename `pwd`)
+COUTRY_NAME=JP STATE_NAME=Tokyo LOCALITY_NAME=Minato-ku ORG_NAME='My Awesome Company' EMAIL=me@example.com bash csr-generator $(basename `pwd`)
 ```
 
 
