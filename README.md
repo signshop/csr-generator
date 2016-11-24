@@ -3,8 +3,13 @@
 USAGE
 =====
 
-1. git clone git@github.com:tohta/csr-generator.git example.com; cd example.com
-1. Run
+Clone it
+
+```
+git clone git@github.com:tohta/csr-generator.git example.com; cd example.com
+```
+
+Then, run it
 
 ```
 bash csr-generator $(basename `pwd`)
